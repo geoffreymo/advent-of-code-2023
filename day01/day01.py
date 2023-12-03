@@ -31,5 +31,4 @@ def l2r_replace(in_str, replace_dict):
 word_replaced = [l2r_replace(line, spelled) for line in lines]
 nums_only = [re.sub('[^0-9]', '', line) for line in word_replaced]
 sums = [int(num[0]+num[-1]) for num in nums_only]
-print(sums)
 print(f'part 2: {sum(sums)}')
